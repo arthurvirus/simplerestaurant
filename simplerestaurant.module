@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function simplerestaurant_menu() {
+  // The paths given here need to match the ones in simplerestaurant.routing.yml exactly.
+  $items['admin/simplerestaurant'] = array(
+    'title' => 'simplerestaurant',
+    'description' => 'This is the demo simplerestaurant page.',
+    // The name of the route from simplerestaurant.routing.yml
+    'route_name' => 'simplerestaurant',
+  );
+  return $items;
+}

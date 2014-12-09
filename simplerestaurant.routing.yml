@@ -1,0 +1,14 @@
+simplerestaurant.demo:
+  path: '/simplerestaurant'
+  defaults:
+    _content: '\Drupal\simplerestaurant\Controller\SimplerestaurantController::demo'
+    _title: 'Demo simple restaurant'
+  requirements:
+    _permission: 'access content'
+simplerestaurant.form:
+  path: '/simplerestaurant/addfooditem'
+  defaults:
+    _form: '\Drupal\simplerestaurant\Form\AddFoodItemForm'
+    _title: 'Add Food Item'
+  requirements:
+    _permission: 'access content'
