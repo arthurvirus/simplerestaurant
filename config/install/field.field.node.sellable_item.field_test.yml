@@ -1,0 +1,22 @@
+uuid: fbc8b619-26d1-4841-a372-d7bf03b50cdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test
+    - node.type.sellable_item
+  module:
+    - text
+id: node.sellable_item.field_test
+field_name: field_test
+entity_type: node
+bundle: sellable_item
+label: test
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+third_party_settings: {  }
+field_type: text

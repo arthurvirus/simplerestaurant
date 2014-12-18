@@ -1,0 +1,17 @@
+uuid: c14a9feb-ca08-40b9-9919-16d3a10d5593
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+name: 'Sellable Item'
+type: sellable_item
+description: 'Item that can be sold (Food, drink, meal,...)'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: 'main:'
