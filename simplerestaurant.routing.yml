@@ -6,7 +6,7 @@ simplerestaurant.demo:
   requirements:
     _permission: 'access content'
 simplerestaurant.form:
-  path: '/simplerestaurant/addfooditem'
+  path: '/addfooditem'
   defaults:
     _form: '\Drupal\simplerestaurant\Form\AddFoodItemForm'
     _title: 'Add Food Item'

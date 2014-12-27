@@ -1,0 +1,23 @@
+uuid: b9b86b57-a0f7-4e06-9a38-5662673f1ce4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sr_parent_category
+    - node.type.sellable_item
+  module:
+    - taxonomy
+id: node.sellable_item.field_sr_parent_category
+field_name: field_sr_parent_category
+entity_type: node
+bundle: sellable_item
+label: 'Parent Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+third_party_settings: {  }
+field_type: taxonomy_term_reference

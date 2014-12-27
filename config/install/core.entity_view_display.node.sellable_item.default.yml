@@ -1,0 +1,56 @@
+uuid: 6142b87b-ee24-4714-8a4e-78d41db2dad5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sellable_item.field_sr_child_category
+    - field.field.node.sellable_item.field_sr_description
+    - field.field.node.sellable_item.field_sr_parent_category
+    - field.field.node.sellable_item.field_sr_price
+    - node.type.sellable_item
+  module:
+    - taxonomy
+    - user
+id: node.sellable_item.default
+label: null
+targetEntityType: node
+bundle: sellable_item
+mode: default
+content:
+  links:
+    weight: 100
+  field_sr_description:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_sr_price:
+    weight: 102
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_sr_child_category:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: taxonomy_term_reference_link
+  field_sr_parent_category:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: taxonomy_term_reference_link
+hidden:
+  langcode: true
+  field_description: true
+  field_parent_category: true
+  field_child_category: true
+third_party_settings: {  }

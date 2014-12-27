@@ -1,0 +1,24 @@
+uuid: 5eeb124b-1a4d-449a-9600-e16e0528f4ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sr_price
+    - node.type.sellable_item
+id: node.sellable_item.field_sr_price
+field_name: field_sr_price
+entity_type: node
+bundle: sellable_item
+label: Price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+third_party_settings: {  }
+field_type: decimal

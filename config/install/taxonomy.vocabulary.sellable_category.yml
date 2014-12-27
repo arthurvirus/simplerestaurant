@@ -1,0 +1,10 @@
+uuid: 1badc13a-fc1f-489f-b240-6479451511d6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Sellable category'
+vid: sellable_category
+description: 'Category of sellable item'
+hierarchy: 0
+weight: 0
+third_party_settings: {  }

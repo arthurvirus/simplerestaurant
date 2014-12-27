@@ -1,0 +1,14 @@
+uuid: 1ba1e41d-7af3-4034-a605-5e53f6b1c990
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sr_owner
+  module:
+    - user
+id: user_remove_role_action.sr_owner
+label: 'Remove the owner role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: sr_owner

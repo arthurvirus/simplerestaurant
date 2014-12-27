@@ -1,0 +1,23 @@
+uuid: 9e64ee8c-98f7-4eff-ac00-eb30d1d936fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sr_child_category
+    - node.type.sellable_item
+  module:
+    - taxonomy
+id: node.sellable_item.field_sr_child_category
+field_name: field_sr_child_category
+entity_type: node
+bundle: sellable_item
+label: 'Child Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+third_party_settings: {  }
+field_type: taxonomy_term_reference

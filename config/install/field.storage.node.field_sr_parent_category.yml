@@ -1,0 +1,25 @@
+uuid: 823ac424-366e-4aaa-9505-5df331210309
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_sr_parent_category
+field_name: field_sr_parent_category
+entity_type: node
+type: taxonomy_term_reference
+settings:
+  allowed_values:
+    -
+      vocabulary: sellable_category
+      parent: 0
+  target_type: taxonomy_term
+  options_list_callback: null
+  target_bundle: null
+module: taxonomy
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false

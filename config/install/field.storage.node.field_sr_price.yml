@@ -1,0 +1,19 @@
+uuid: 913a1825-5add-42f6-a35b-913b70662fec
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sr_price
+field_name: field_sr_price
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false

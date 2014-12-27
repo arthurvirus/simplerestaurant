@@ -1,4 +1,4 @@
-uuid: c14a9feb-ca08-40b9-9919-16d3a10d5593
+uuid: bc9593fb-e2d8-4cc7-a443-a12002d79b95
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - menu_ui
 name: 'Sellable Item'
 type: sellable_item
-description: 'Item that can be sold (Food, drink, meal,...)'
+description: 'Item that can be sold'
 help: ''
 new_revision: false
 preview_mode: 0

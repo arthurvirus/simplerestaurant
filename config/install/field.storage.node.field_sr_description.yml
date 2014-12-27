@@ -1,0 +1,19 @@
+uuid: 097801f8-028c-485c-ad29-411e24ba0af7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sr_description
+field_name: field_sr_description
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
