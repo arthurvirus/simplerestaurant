@@ -26,23 +26,26 @@ class AddFoodItemForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
 
   //First get all the taxonomy term
- 
+  $categories = array();
   $entity_type = 'taxonomy_term';
   $properties = array('vid' => 'sellable_category');
-  $vocabulary = entity_load_multiple_by_properties($entity_type,$properties);// \Drupal\taxonomy\Entity\Vocabulary() ;
-//$vocabulary = entity_load_multiple($entity_type, NULL, FALSE);
-
-//dsm($vocabulary);
+  $vocabulary = entity_load_multiple_by_properties($entity_type,$properties);
 
   foreach($vocabulary as $term){
-    //$food_item_list[$products->nid] = $term->title;
+  
     dsm($term->name->value);
 	dsm($term->weight->value);
 	dsm($term->tid->value);
-	dsm($term);//Parent ?
 	
-	///dsm($term);
+	$tid = $term->tid->value;
+	$children = \Drupal::entityManager()->getStorage('taxonomy_term')->loadChildren($tid);
+	if( count($children) == 0 ){
+		//add only the leaves in the dropdownbox
+		array_push($categories, $term);
+	}
   }
+  
+  dsm(count($categories));
   
   
   $form['email'] = array(

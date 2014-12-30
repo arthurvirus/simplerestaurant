@@ -77,8 +77,4 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-hidden:
-  field_description: true
-  field_parent_category: true
-  field_child_category: true
 third_party_settings: {  }
