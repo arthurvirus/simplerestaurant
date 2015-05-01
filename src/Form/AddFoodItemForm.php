@@ -32,21 +32,27 @@ class AddFoodItemForm extends FormBase {
   $vocabulary = entity_load_multiple_by_properties($entity_type,$properties);
 
   foreach($vocabulary as $term){
-  
+  /*
     dsm($term->name->value);
 	dsm($term->weight->value);
 	dsm($term->tid->value);
-	
+	*/
 	$tid = $term->tid->value;
 	$children = \Drupal::entityManager()->getStorage('taxonomy_term')->loadChildren($tid);
 	if( count($children) == 0 ){
 		//add only the leaves in the dropdownbox
-		array_push($categories, $term);
+		array_push($categories, $term->name->value);
 	}
   }
   
-  dsm(count($categories));
-  
+  //dsm(count($categories));
+	$form['category'] = array(
+   '#type' => 'select',
+   '#title' => t('Category'),
+   '#options' => $categories,
+   //'#default_value' => $category['selected'],
+   //'#description' => t('bonjour melissa'),
+ );
   
   $form['email'] = array(
       '#type' => 'email',
@@ -68,7 +74,8 @@ class AddFoodItemForm extends FormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-     
+     //TODO Find the category Id based on the name
+	 
     if (strpos($form_state['values']['email'], '.com') === FALSE ) {
       $this->setFormError('email', $form_state, $this->t('This is not a .com email address.'));
     } 
@@ -79,6 +86,7 @@ class AddFoodItemForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
      
+	 //TODO create content based on form
     drupal_set_message($this->t('Your email address is @email', array('@email' => $form_state['values']['email'])));
   }
    
